@@ -6,10 +6,11 @@
 //
 // Description: This file contains the code to calculate an
 //              approximation of pi using the euler series
-//              algorithm
+//              algorithm. How to compile using math.h library:
+//              gcc eulerpi_serial_c.c -lm
 //
 // SIZE = 100_000_000
-// Serial time: 1549.32680 ms
+// Serial time: 1,527.14200 ms
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -24,14 +25,14 @@
 
 #define SIZE 100000000 //1e8
 
-double calculate_pi(){
+double calculate_pi(int size){
     double pi = 0;
-    int den = 1;
 
-    for(int i=1; i<SIZE; i++){
-        pi += pow(-1, i+1)*4/den;
-        den += 2;
+    for(int i=0; i<size; i++){
+        pi += pow(-1, i)*4 / ((i*2)+1);
     }
+
+    return pi;
 }
 
 int main(){
@@ -41,7 +42,7 @@ int main(){
 	ms = 0;
     for(int i=0; i<N; i++){
         start_timer();
-        result = calculate_pi();
+        result = calculate_pi(SIZE);
         ms+=stop_timer();
     }
     
