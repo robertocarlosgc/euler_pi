@@ -7,7 +7,7 @@
 // Description: This file contains the code to calculate an
 //              approximation of pi using the euler series
 //              algorithm. How to compile using math.h library:
-//              g++ eulerpi_serial_c.c -lm -ltbb
+//              g++ eulerpi_parallel_tbb.cpp -lm -ltbb
 //
 // SIZE = 100_000_000
 // Serial time: 2354.31 ms

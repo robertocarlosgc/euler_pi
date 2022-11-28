@@ -7,7 +7,7 @@
 // Description: This file contains the code to calculate an
 //              approximation of pi using the euler series
 //              algorithm. How to compile using math.h library:
-//              nvcc eulerpi_serial_c.cu -lm
+//              nvcc eulerpi_parallel_cuda.cu -lm
 //
 // SIZE = 100_000_000
 // Serial time: 1,527.14200 ms
