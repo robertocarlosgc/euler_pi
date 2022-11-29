@@ -10,7 +10,7 @@
 //              go run eulerpi_serial_go.go
 //
 // SIZE = 100_000_000
-// Serial time: 
+// Serial time: 18069.6848 ms
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -20,11 +20,37 @@
 
 package main
 
-import(
+import (
 	"fmt"
+	"math"
+	"time"
 )
 
+const SIZE = 100_000_000
+const N = 10
+
+func calculatePi(size int) float64{
+	pi:=0.0
+
+	for i:=0; i<size; i++{
+		pi += math.Pow(-1, float64(i))*4/((float64 (i)*2)+1)
+	}
+
+	return pi
+}
+
 func main(){
-	result := 0.0
-	fmt.Printf("%f", result)
+	var start time.Time
+	var elapsed time.Duration
+	var result float64
+
+	fmt.Println("Starting...")
+	for i:=0; i<1; i++{
+		start = time.Now()		
+		result = calculatePi(SIZE)
+		elapsed = time.Since(start)
+	}
+
+	fmt.Printf("Calculated value of PI: %f\n", result)
+	fmt.Printf("avg time = %s", elapsed)
 }
