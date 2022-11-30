@@ -11,9 +11,9 @@
 //              gcc eulerpi_parallel_omp.c -lm -fopenmp
 //
 // SIZE = 100_000_000
-// Serial time: 1,527.14200 ms
-// Parallel time: 0.11570 ms
-// Speedup: 13,199.1529
+// Serial time: 1,532.68780 ms
+// Parallel time: 250.30 ms
+// Speedup: 6.123403
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -27,7 +27,7 @@
 #include <math.h>
 #include "utils.h"
 
-#define SIZE 1000 //1e8
+#define SIZE 100000000 //1e8
 
 double calculate_pi(int size){
     double pi = 0;

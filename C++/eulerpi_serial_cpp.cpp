@@ -10,7 +10,7 @@
 //              g++ eulerpi_serial_cpp.cpp -lm
 //
 // SIZE = 100_000_000
-// Serial time: 2354.31 ms
+// Serial time: 2373.42 ms
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -61,6 +61,8 @@ int main(){
     }
     
     cout << "Calculated value of PI = " << obj.getResult() << endl;
+    cout << "Real PI = " << M_PI << endl;
+    cout << "Percent error = " << abs(obj.getResult()-M_PI)/M_PI << endl;
     cout << "avg time = " << (ms / N) << " ms" << endl;
     return 0;
 }

@@ -10,9 +10,9 @@
 //              go run eulerpi_serial_go.go
 //
 // SIZE = 100_000_000
-// Serial time: 18069.6848 ms
-// Parallel time: 1984.4217 ms
-// Speedup: 9.1057
+// Serial time: 10897.6999 ms
+// Parallel time: 2404.7984 ms
+// Speedup: 4.5316
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -73,6 +73,8 @@ func main(){
 		elapsed = time.Since(start)
 	}
 
-	fmt.Printf("Calculated value of PI: %f\n", result)
-	fmt.Printf("avg time = %s", elapsed)
+	fmt.Printf("Calculated value of PI = %f\n", result)
+	fmt.Printf("Real PI = %f\n", math.Pi)
+	fmt.Printf("Percent error = %f\n", math.Abs(result-math.Pi)/math.Pi*100)
+	fmt.Printf("avg time = %s\n", elapsed)
 }

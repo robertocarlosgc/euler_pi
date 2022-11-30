@@ -10,7 +10,7 @@
 //              javac Eulerpi_serial_java.java
 //
 // SIZE = 100_000_000
-// Serial time:  3244.6 ms
+// Serial time: 3242.9 ms
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -53,7 +53,9 @@ public class Eulerpi_serial_java{
 
 			acum += (stopTime - startTime);
 		}
-		System.out.println("sum = " + e.getResult());
-		System.out.println("avg time = " + (acum / Utils.N) + "ms");
+		System.out.println("Calculated value of PI = " + e.getResult());
+        System.out.println("Real PI = " + Math.PI);
+        System.out.println("Percentage error = " + Math.abs(e.getResult()-Math.PI)/Math.PI*100);
+		System.out.println("avg time = " + (acum / Utils.N) + " ms");
     }
 }

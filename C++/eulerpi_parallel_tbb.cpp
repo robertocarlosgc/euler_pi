@@ -10,9 +10,9 @@
 //              g++ eulerpi_parallel_tbb.cpp -lm -ltbb
 //
 // SIZE = 100_000_000
-// Serial time: 2354.31 ms
-// Parallel time: 382.935 ms
-// Speedup: 6.1480
+// Serial time: 2373.42 ms
+// Parallel time: 392.131 ms
+// Speedup: 6.0526
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -27,7 +27,7 @@
 #include <math.h>
 #include "utils.h"
 
-#define SIZE 100000000 //1e8
+#define SIZE 10000 //1e8
 
 using namespace std;
 using namespace tbb;
@@ -71,6 +71,8 @@ int main(){
     }
     
     cout << "Calculated value of PI = " << result/N << endl;
+    cout << "Real PI = " << M_PI << endl;
+    cout << "Percent error = " << abs((result/N)-M_PI)/M_PI << endl;
     cout << "avg time = " << (ms / N) << " ms" << endl;
     return 0;
 }

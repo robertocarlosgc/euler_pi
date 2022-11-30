@@ -10,9 +10,9 @@
 //              nvcc eulerpi_parallel_cuda.cu -lm
 //
 // SIZE = 100_000_000
-// Serial time: 1,527.14200 ms
-// Parallel time: 0.00300 ms
-// Speedup: 509,047.3333
+// Serial time: 1,532.68780 ms
+// Parallel time: 0.00290 ms
+// Speedup: 528,513.0344
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial

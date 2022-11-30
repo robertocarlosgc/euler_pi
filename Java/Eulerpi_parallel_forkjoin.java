@@ -10,9 +10,9 @@
 //              javac Eulerpi_parallel_forkjoin.java
 //
 // SIZE = 100_000_000
-// Serial time:  3244.6 ms
-// Parallel time: 634.2 ms
-// Speedup: 5.1160
+// Serial time: 3242.9 ms
+// Parallel time: 631.0 ms
+// Speedup: 5.1393
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
@@ -70,8 +70,9 @@ public class Eulerpi_parallel_forkjoin extends RecursiveTask<Double>{
 			stopTime = System.currentTimeMillis();
 			ms += (stopTime - startTime);
 		}
-		System.out.println("sum = " + result);
+		System.out.println("Calculated value of PI = " + result);
+        System.out.println("Real PI = " + Math.PI);
+        System.out.println("Percentage error = " + Math.abs(result-Math.PI)/Math.PI*100);
 		System.out.println("avg time = " + (ms / Utils.N) + " ms");
     }
-
 }

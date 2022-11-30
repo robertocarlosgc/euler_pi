@@ -10,7 +10,7 @@
 //              gcc eulerpi_serial_c.c -lm
 //
 // SIZE = 100_000_000
-// Serial time: 1,527.14200 ms
+// Serial time: 1,532.68780 ms
 //
 // Copyright (c) 2020 by Tecnologico de Monterrey.
 // All Rights Reserved. May be reproduced for any non-commercial
