@@ -52,6 +52,8 @@ int main(){
     }
     
     printf("Calculated value of PI = %lf\n", result);
+    printf("Real PI = %f\n", M_PI);
+    printf("Percent error = %f\n", abs(result-M_PI)/M_PI * 100);
     printf("avg time = %.5lf ms\n", (ms / N));
     return 0;
 }

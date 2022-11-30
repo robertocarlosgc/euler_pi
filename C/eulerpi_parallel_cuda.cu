@@ -81,8 +81,10 @@ int main(int argc, char* argv[]){
 		acum += results[i];
 	}
 
-    printf("sum = %lf\n", acum);
-	printf("avg time = %.5lf\n", (ms / N));
+    printf("Calculated PI = %lf\n", acum);
+    printf("Real PI = %f\n", M_PI);
+    printf("Percent error = %f\n", abs(acum-M_PI)/M_PI * 100);
+	printf("avg time = %.5lf ms\n", (ms / N));
 
 	cudaFree(d_r);
 
